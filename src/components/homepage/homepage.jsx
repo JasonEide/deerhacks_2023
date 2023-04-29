@@ -10,6 +10,7 @@ import {db} from "./../../api/firebase-config";
 export default function Homepage({data}) {
     const [initial, setInitial] = useState(0);
     const [msg, setMsg] = useState('');
+    const [editedMsg, setEditedMsg] = useState('');
     const [originalMsg, setOriginalMsg] = useState('');
     const [exp, setExp] = useState(0);
     const [lvl, setLvl] = useState(1);
@@ -23,6 +24,7 @@ export default function Homepage({data}) {
             setLvl(curr_user.lvl);
         }
         setMsg(data['edited']);
+        setEditedMsg(data['edited']);
         setOriginalMsg(data['original']);
         setInitial(1);
     }
@@ -38,6 +40,7 @@ export default function Homepage({data}) {
         }
         let gainedExp = getExp(originalMsg, msg);
         updateExp(gainedExp, is_logged, curr_user);
+        handleReset();
     };
 
     /**
