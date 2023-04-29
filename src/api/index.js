@@ -10,8 +10,8 @@ export const fetchData = async () =>{
         const sentence = info[infoArray[1]];
         
         //NOTE: The commented line below is used for testing if you want to print the output of the text:
-        console.log(createErrors(sentence));
-        //return createErrors(sentence);
+        //console.log(createErrors(sentence));
+        return createErrors(sentence);
     } catch (error) {
         console.log("API reached maximum calls");
     }

@@ -17,7 +17,6 @@ import Input from '@mui/material/Input';
 export var curr_user = null;
 export var is_logged = false;
 export default function Login() {
-
     const [users, setUsers] = useState([]);
     const getUsers = async () =>{
         const data = await getDocs(usersref);

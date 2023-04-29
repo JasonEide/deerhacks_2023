@@ -8,20 +8,18 @@ import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import { fetchData } from './api';
 
 class App extends React.Component {
-
-  async componentDidMount() {
-    await fetchData();
-    // here is where you will initialize whatever you want to use when the app first renders
+  state = {
+    data: {}
   }
-
-  async componentDidUpdate() {
-    // here is where you will update the state of the website
+  async componentDidMount() {
+    const temp = await fetchData();
+    this.setState({data: temp});
   }
   render() {
     return(
       <Router>
         <Routes>
-          <Route path={"/"} element={<Homepage/>}/>
+          <Route path={"/"} element={<Homepage data={this.state.data}/>}/>
           <Route path={"/login"} element={<Login/>}/>
           <Route path={"/register"} element={<Register/>}/>
           <Route path={"/about"} element={<About/>}/>
