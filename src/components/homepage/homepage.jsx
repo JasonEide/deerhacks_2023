@@ -160,6 +160,14 @@ export default function Homepage({data}) {
                     </Button>
                 </div>
             </div>
+                        
+            <div className={styles.expwrapper}>
+                <div className={styles.level}>Level 6</div>
+                <div className={styles.expinfo}>10/100</div>
+                <div className={styles.expbar}>
+                    <span styles="width: 100%"></span>
+                </div>
+            </div>
             {lvl}, {exp}
         </div>
     );

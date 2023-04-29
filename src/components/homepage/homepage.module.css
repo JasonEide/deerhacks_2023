@@ -25,3 +25,43 @@ body {
 .buttons {
     margin-right: 10px;
 }
+.expwrapper{
+    position:absolute;
+    top:500px;
+    left:100px;
+    width:500px;
+    height:50px;
+  }
+
+.expbar {
+    height: 40px; 
+    position: ab;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.expbar > span {
+    display: block;
+    height: 100%;
+    width: 20%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43,194,83);
+    
+    position: relative;
+    overflow: hidden;
+  }
+
+  .level {
+    display:inline-block;
+    font-size:50px;
+  }
+
+  .expinfo {
+    display:inline-block;
+    font-size:10px;
+  }
