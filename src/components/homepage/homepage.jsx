@@ -36,10 +36,13 @@ export default function Homepage({data}) {
     const handleMsg = () => {
         let curr_user = null;
         let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
+        let gainedExp;
         if(is_logged){
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
+            gainedExp = getExp(originalMsg, msg, editedMsg);
+        }else{
+            gainedExp = 0;
         }
-        let gainedExp = getExp(originalMsg, msg, editedMsg);
         updateExp(gainedExp, is_logged, curr_user);
         handleReset();
     };
