@@ -1,11 +1,47 @@
 import React from 'react';
 import styles from './about.module.css';
+import { IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function About() {
     return (
         <div>
-            Hello
+            <div className={styles.background}>
+                <h1>
+                    About the team!
+                </h1>
+                <div>
+                    <IconButton className={styles.button}>
+                        <Link to={"/"} className={styles.link}>
+                            Home
+                        </Link>
+                    </IconButton>
+                </div>
+            </div>
+            <div className={styles.pic}>
+                <img src={require("./pictures/damon.png")} width='315px' height='275px'/>
+                <div className={styles.des}>
+                    <h1>Jason Eide</h1>
+                </div>
+            </div>
+            <div className={styles.pic}>
+                <img src={require("./pictures/nao.jpg")}/>
+                <div className={styles.des}>
+                    <h1>Omar</h1>
+                </div>
+            </div>
+            <div className={styles.pic}>
+                <img src={require("./pictures/nao.jpg")}/>
+                <div className={styles.des}>
+                    <h1>Damon</h1>
+                </div>
+            </div>
+            <div className={styles.pic}>
+                <img src={require("./pictures/nao.jpg")}/>
+                <div className={styles.des}>
+                    <h1>Na</h1>
+                </div>
+            </div>
         </div>
-    )
-
+    );
 }
