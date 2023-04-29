@@ -2,9 +2,71 @@ body {
     background: #ececec;
     font-family: 'Anton', sans-serif;
 }
-.background {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
+.container {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.rectangle {
+display: inline-block;
+width: 500px;
+height: 500px;
+margin-top: 50px;
+margin-bottom: 50px;
+background-color: white;
+border-radius: 40px;
+}
+.email {
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+  margin-top: 30% !important;
+  
+}
+.pass {
+  padding-top: 20px;
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+  width: -100px;
+}
+.labelpass {
+    left: -13px !important;
+}
+.buttonLogin {
+  margin-left: 38.5% !important;
+  margin-top: 8% !important;
+  color: black !important;
+  text-decoration: none !important;
+  border-color: grey !important;
+}
+.register {
+  margin-top: 5% !important;
+  margin-left: 43.5% !important;
+}
+.buttonRegister {
+  margin-left: 38% !important;
+  margin-top: 8% !important;
+}
+.login {
+  margin-top: 5% !important;
+  margin-left: 44% !important;
+}
+.link {
+  color: black;
+  text-decoration: none;
+}
+.loginBack {
+  margin-top: -718px !important;
+  padding-bottom: 5px !important;
+  margin-left: 12px !important;
+  font-size: small !important;
+}
+.registerBack {
+  margin-top: -854px !important;
+  margin-left: 12px !important;
+  font-size: small !important;
+}
+.backIcon {
+  padding-top:5px;
+  margin-top: -5px !important;
 }
