@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/deerhacks_2023/static/css/main.25f64081.css",
+    "main.js": "/deerhacks_2023/static/js/main.51f0f224.js",
+    "static/media/damon.png": "/deerhacks_2023/static/media/damon.8db93c47b4ed704a109a.png",
+    "static/media/nao.jpg": "/deerhacks_2023/static/media/nao.253baec3ee4a6e2f65ff.jpg",
+    "index.html": "/deerhacks_2023/index.html",
+    "main.25f64081.css.map": "/deerhacks_2023/static/css/main.25f64081.css.map",
+    "main.51f0f224.js.map": "/deerhacks_2023/static/js/main.51f0f224.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25f64081.css",
+    "static/js/main.51f0f224.js"
+  ]
+}
