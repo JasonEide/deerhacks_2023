@@ -36,7 +36,7 @@ export default function Homepage({data}) {
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
         }
         let gainedExp = getExp(originalMsg, msg);
-        console.log(gainedExp);
+        //console.log(gainedExp);
         updateExp(gainedExp, is_logged, curr_user);
         //console.log(exp, lvl);
     };
@@ -51,7 +51,7 @@ export default function Homepage({data}) {
         const correctWords = correctText.split(" ");
         const userWords = userText.split(" ");
         //user didn't follow the rules and added/removed words, give 0xp.
-        if(correctWords.length === userWords.length){
+        if(correctWords.length != userWords.length){
             return 0;
         }
         let numCorrect = 0;
@@ -83,7 +83,7 @@ export default function Homepage({data}) {
                 temp_exp = temp_exp - temp_lvl**2;
                 temp_lvl++;
             } 
-            console.log(temp_exp, temp_lvl);
+            //console.log(temp_exp, temp_lvl);
             setExp(temp_exp);
             setLvl(temp_lvl);
             await updateDoc(user_ref, {exp: temp_exp, lvl: temp_lvl});
