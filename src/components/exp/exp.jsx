@@ -3,7 +3,7 @@ import styles from './exp.module.css';
 import {db} from "./../../api/firebase-config";
 import {updateDoc, doc, arrayUnion} from "@firebase/firestore";
 
-export default function Exp() {
+export default function Exp({edited, original}) {
     let curr_user = null;
     let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
     if(is_logged){
