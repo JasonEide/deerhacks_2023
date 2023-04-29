@@ -18,6 +18,7 @@ export default function Homepage({data}) {
         let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
         if(is_logged){
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
+            console.log(curr_user.exp);
             setExp(curr_user.exp);
             setLvl(curr_user.lvl);
         }
@@ -36,9 +37,7 @@ export default function Homepage({data}) {
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
         }
         let gainedExp = getExp(originalMsg, msg);
-        //console.log(gainedExp);
         updateExp(gainedExp, is_logged, curr_user);
-        //console.log(exp, lvl);
     };
 
     /**
@@ -80,12 +79,12 @@ export default function Homepage({data}) {
             let temp_exp = curr_user.exp + val;
             let temp_lvl = curr_user.lvl;
             if (temp_exp >= temp_lvl**2){
-                temp_exp = temp_exp - temp_lvl**2;
-                temp_lvl++;
+                curr_user.exp = temp_exp - temp_lvl**2;
+                curr_user.lvl++;
             } 
-            //console.log(temp_exp, temp_lvl);
-            setExp(temp_exp);
-            setLvl(temp_lvl);
+            setExp(curr_user.exp);
+            setLvl(curr_user.lvl);
+            localStorage.setItem("curr_user", JSON.stringify(curr_user));
             await updateDoc(user_ref, {exp: temp_exp, lvl: temp_lvl});
         }
     }
@@ -161,6 +160,7 @@ export default function Homepage({data}) {
                     </Button>
                 </div>
             </div>
+            {lvl}, {exp}
         </div>
     );
 }
