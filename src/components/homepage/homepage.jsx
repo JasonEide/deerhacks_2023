@@ -76,10 +76,9 @@ export default function Homepage({data}) {
     async function updateExp(val, is_logged, curr_user) {
         if (is_logged) {
             const user_ref = doc(db, "users", curr_user.id);
-            let temp_exp = curr_user.exp + val;
-            let temp_lvl = curr_user.lvl;
-            if (temp_exp >= temp_lvl**2){
-                curr_user.exp = temp_exp - temp_lvl**2;
+            curr_user.exp += val;
+            if (curr_user.exp >= curr_user.lvl**2){
+                curr_user.exp -= curr_user.lvl**2;
                 curr_user.lvl++;
             } 
             setExp(curr_user.exp);
@@ -102,7 +101,6 @@ export default function Homepage({data}) {
         localStorage.setItem("curr_user", "null");
         window.location.reload();
     };
-
     return (
         <div>
             <div className={styles.background}>
@@ -160,15 +158,13 @@ export default function Homepage({data}) {
                     </Button>
                 </div>
             </div>
-                        
             <div className={styles.expwrapper}>
-                <div className={styles.level}>Level 6</div>
-                <div className={styles.expinfo}>10/100</div>
+                <div className={styles.level}>Level {lvl}</div>
+                <div className={styles.expinfo}>{exp}/{lvl ** 2}</div>
                 <div className={styles.expbar}>
-                    <span styles="width: 100%"></span>
+                    <span style={{width: `${(exp / (lvl ** 2)) * 100}%`}}/>
                 </div>
             </div>
-            {lvl}, {exp}
         </div>
     );
 }

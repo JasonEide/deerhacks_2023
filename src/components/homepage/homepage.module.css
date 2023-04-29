@@ -23,7 +23,7 @@ body {
     align-items: center;
 }
 .buttons {
-    margin-right: 10px;
+    margin-right: 10px !important;
 }
 .expwrapper{
     position:absolute;
@@ -45,7 +45,6 @@ body {
 .expbar > span {
     display: block;
     height: 100%;
-    width: 20%;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-top-left-radius: 20px;
