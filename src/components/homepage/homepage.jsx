@@ -14,6 +14,7 @@ export default function Homepage({data}) {
     const [originalMsg, setOriginalMsg] = useState('');
     const [exp, setExp] = useState(0);
     const [lvl, setLvl] = useState(1);
+    const [problems, setProblems] = useState([]);
     if (initial == 0 && data != undefined && Object.keys(data).length > 0) {
         let curr_user = null;
         let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
@@ -25,6 +26,7 @@ export default function Homepage({data}) {
         setMsg(data['edited']);
         setEditedMsg(data['edited']);
         setOriginalMsg(data['original']);
+        setProblems(data['problems']);
         setInitial(1);
     }
 
