@@ -19,7 +19,6 @@ export default function Homepage({data}) {
         let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
         if(is_logged){
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
-            console.log(curr_user.exp);
             setExp(curr_user.exp);
             setLvl(curr_user.lvl);
         }
@@ -38,7 +37,7 @@ export default function Homepage({data}) {
         if(is_logged){
             curr_user = (JSON.parse(localStorage.getItem("curr_user")));
         }
-        let gainedExp = getExp(originalMsg, msg);
+        let gainedExp = getExp(originalMsg, msg, editedMsg);
         updateExp(gainedExp, is_logged, curr_user);
         handleReset();
     };
@@ -48,12 +47,13 @@ export default function Homepage({data}) {
      * the user will receive from editing a sentence
      * @param {*} correctText - The original generated sentence
      * @param {*} userText - The user-submitted sentence
+     * @param {*} editedText - the grammar-scrambled text made by the computer
      */
-    const getExp = (correctText, userText) => {
+    const getExp = (correctText, userText, editedText) => {
         const correctWords = correctText.split(" ");
         const userWords = userText.split(" ");
         //user didn't follow the rules and added/removed words, give 0xp.
-        if(correctWords.length != userWords.length){
+        if(correctWords.length != userWords.length || userText === editedText){
             return 0;
         }
         let numCorrect = 0;
@@ -94,6 +94,7 @@ export default function Homepage({data}) {
     const handleReset = async () => {
         const data = await fetchData();
         setMsg(data['edited']);
+        setEditedMsg(data['edited']);
         setOriginalMsg(data['original']);
     };
 
