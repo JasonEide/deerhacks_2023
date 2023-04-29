@@ -9,7 +9,16 @@ export default function Homepage({data}) {
     const [initial, setInitial] = useState(0);
     const [msg, setMsg] = useState('');
     const [originalMsg, setOriginalMsg] = useState('');
+    const [exp, setExp] = useState(0);
+    const [lvl, setLvl] = useState(1);
     if (initial == 0 && data != undefined && Object.keys(data).length > 0) {
+        let curr_user = null;
+        let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
+        if(is_logged){
+            curr_user = (JSON.parse(localStorage.getItem("curr_user")));
+            setExp(curr_user.exp);
+            setLvl(curr_user.lvl);
+        }
         setMsg(data['edited']);
         setOriginalMsg(data['original']);
         setInitial(1);
@@ -19,8 +28,22 @@ export default function Homepage({data}) {
         setMsg(event.target.value);
     };
     const handleMsg = () => {
-        // here
+        let curr_user = null;
+        let is_logged = (JSON.parse(localStorage.getItem("is_logged")));
+        if(is_logged){
+            curr_user = (JSON.parse(localStorage.getItem("curr_user")));
+        }
+        updateExp();
     };
+
+    async function updateExp(val) {
+        if (is_logged) {
+            const user_ref = doc(db, "users", curr_user.id);
+            let temp_exp = curr_user.exp + val;
+            
+            await updateDoc(user_ref, {exp: temp_exp, lvl: temp_lvl});
+        }
+    }
 
     const handleReset = async () => {
         const data = await fetchData();
