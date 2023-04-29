@@ -36,11 +36,11 @@ export default function Homepage({data}) {
         updateExp();
     };
 
-    async function updateExp(val) {
+    async function updateExp(val, is_logged, curr_user) {
         if (is_logged) {
             const user_ref = doc(db, "users", curr_user.id);
             let temp_exp = curr_user.exp + val;
-            
+
             await updateDoc(user_ref, {exp: temp_exp, lvl: temp_lvl});
         }
     }
@@ -104,13 +104,17 @@ export default function Homepage({data}) {
                     value={msg}
                 />
             </div>
-            <div>
-                <Button variant="contained" color="error" onClick={handleReset}>
-                    Reset
-                </Button>
-                <Button variant="contained" color="success" onClick={handleMsg}>
-                    Submit
-                </Button>
+            <div className={styles.backgroundButtons}>
+                <div>
+                    <Button variant="contained" color="error" className={styles.buttons} onClick={handleReset}>
+                        Reset
+                    </Button>
+                </div>
+                <div>
+                    <Button variant="contained" color="success" className={styles.buttons} onClick={handleMsg}>
+                        Submit
+                    </Button>
+                </div>
             </div>
         </div>
     );
