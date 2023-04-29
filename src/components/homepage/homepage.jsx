@@ -84,7 +84,7 @@ export default function Homepage({data}) {
             setExp(curr_user.exp);
             setLvl(curr_user.lvl);
             localStorage.setItem("curr_user", JSON.stringify(curr_user));
-            await updateDoc(user_ref, {exp: temp_exp, lvl: temp_lvl});
+            await updateDoc(user_ref, {exp: curr_user.exp, lvl: curr_user.lvl});
         }
     }
 

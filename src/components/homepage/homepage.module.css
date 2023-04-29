@@ -34,7 +34,7 @@ body {
   }
 
 .expbar {
-    height: 40px; 
+    height: 30px; 
     position: ab;
     background: #555;
     border-radius: 25px;
@@ -45,8 +45,9 @@ body {
 .expbar > span {
     display: block;
     height: 100%;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    width: 10%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: rgb(43,194,83);
@@ -57,10 +58,11 @@ body {
 
   .level {
     display:inline-block;
-    font-size:50px;
+    font-size:40px;
   }
 
   .expinfo {
     display:inline-block;
-    font-size:10px;
+    padding-left: 10px;
+    font-size:20px;
   }
