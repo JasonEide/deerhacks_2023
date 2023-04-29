@@ -40,7 +40,7 @@ export default function Login() {
     const handleRegister = async () => {
         if(email.match(re)){
             console.log('hi');
-            await addDoc(usersRef, {email: email, password: values.password, exp: 0});
+            await addDoc(usersRef, {email: email, password: values.password, exp: 0, lvl: 1});
             alert("Account Created! You'll be redirected to login.")
             navi("/login");
         }

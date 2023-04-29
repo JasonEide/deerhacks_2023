@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function Homepage({data}) {
     const [initial, setInitial] = useState(0);
     const [msg, setMsg] = useState('');
-    if (initial == 0 && Object.keys(data).length > 0) {
+    if (initial == 0 && data != undefined && Object.keys(data).length > 0) {
         const temp = data['edited'];   
         setMsg(temp);
         setInitial(1);
