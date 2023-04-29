@@ -108,6 +108,8 @@ export default function Homepage({data}) {
     const logoutUser = async () => {
         localStorage.setItem("is_logged", "false");
         localStorage.setItem("curr_user", "null");
+        setExp(0);
+        setLvl(1);
         window.location.reload();
     };
     return (
