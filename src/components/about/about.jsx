@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './about.module.css';
 import { IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function About() {
     return (
@@ -23,6 +25,12 @@ export default function About() {
                 <div className={styles.desJason}>
                     <h1>
                         Jason Eide
+                        <a href='https://www.linkedin.com/in/jason-eide02/' className={styles.image}>
+                            <LinkedInIcon/>
+                        </a>
+                        <a href='https://github.com/JasonEide' className={styles.image}>
+                            <GitHubIcon/>
+                        </a>
                     </h1>
                     <div>
                         Pronouns: He/Him
@@ -40,6 +48,12 @@ export default function About() {
                 <div className={styles.desOmar}>
                     <h1>
                         Omar
+                        <a href='https://www.linkedin.com/in/omar-al-awadhi-a18984254/' className={styles.image}>
+                            <LinkedInIcon/>
+                        </a>
+                        <a href='https://github.com/AlawadhiBOT' className={styles.image}>
+                            <GitHubIcon/>
+                        </a>
                     </h1>
                     <div>
                         Pronouns: He/Him
@@ -57,6 +71,12 @@ export default function About() {
                 <div className={styles.desDamon}>
                     <h1>
                         Damon Ma
+                        <a href='https://www.linkedin.com/in/damon-d-ma/' className={styles.image}>
+                            <LinkedInIcon/>
+                        </a>
+                        <a href='https://github.com/Damon-D-Ma' className={styles.image}>
+                            <GitHubIcon/>
+                        </a>
                     </h1>
                     <div>
                         Pronouns: He/Him
@@ -77,6 +97,12 @@ export default function About() {
                 <div className={styles.desNao}>
                     <h1>
                         Nao
+                        <a href='https://www.linkedin.com/in/nao-nagashima-68b045234/' className={styles.image}>
+                            <LinkedInIcon/>
+                        </a>
+                        <a href='https://github.com/diifault' className={styles.image}>
+                            <GitHubIcon/>
+                        </a>
                     </h1>
                     <div>
                         Pronouns: He/Him
