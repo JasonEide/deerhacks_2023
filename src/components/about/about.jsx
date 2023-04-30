@@ -20,6 +20,75 @@ export default function About() {
                     </IconButton>
                 </div>
             </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    Inspiration
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                As computer science students, our writing skills are not as strong as our technical abilities,
+                so we want a motivating platform to improve them.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    What it does
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                Fix My Mistake prompts users with a grammatically incorrect sentence that they must fix. 
+                Depending on the accuracy of their attempt, experience points are rewarded to them which are used to level up.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    How we built it
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                Fix My Mistake was built in a team of four using Google Firebase, HTML, CSS, JavaScript, React, React Router DOM, 
+                Material UI, JSON API, and Advice Slip API.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    Challenges we ran into
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                It was difficult to find an efficient open-source API that could randomly generate sentences for the user to read.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    Accomplishments that we're proud of
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                Our team is proud that we were able to complete a useful and functional product within the deadline to share with others.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    What we learned
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                The team behind Fix My Mistake got to experience the fundamentals of web development and web scraping, in addition to 
+                sharpening our skills in communication and collaboration.
+            </div>
+
+            <div className={styles.introtext}>
+                <h2>
+                    What's next for Fix My Mistake
+                </h2>
+            </div>
+            <div className={styles.introtext}>
+                The next level for Fix My Mistake includes better grammar detection and text generation systems, multiple gamemodes, 
+                and an improved user-interface.
+            </div>
+
             <div className={styles.pic}>
                 <img src={require("./pictures/Jason.jpg")} width='315px' height='275px' alt="Jason pic"/>
                 <div className={styles.desJason}>
