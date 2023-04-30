@@ -4,9 +4,10 @@ let url = 'https://api.adviceslip.com/advice';
 const infoArray = ["id", "advice"];
 
 export const fetchData = async () =>{
-
+    const num = Math.random() * (224 - 1) + 1;
+    let tempUrl = `${url}/${num}`
     try{
-        const {data:{"slip": info}} = await axios.get(url);
+        const {data:{"slip": info}} = await axios.get(tempUrl);
         const sentence = info[infoArray[1]];
         return createErrors(sentence);
     } catch (error) {
