@@ -5,7 +5,7 @@ const infoArray = ["id", "advice"];
 
 export const fetchData = async () =>{
     let paragraph = '';
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 2; i++) {
         const num = Math.random() * (224 - 1) + 1;
         if (num != 146) {
             let tempUrl = `${url}/${num}`;

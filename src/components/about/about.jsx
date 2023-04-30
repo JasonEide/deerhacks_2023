@@ -21,7 +21,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className={styles.introtext}>
+            <div className={styles.introtext} style={{marginTop:"-25px"}}>
                 <h2>
                     Inspiration
                 </h2>
