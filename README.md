@@ -12,7 +12,6 @@ User progress is logged and stored via an account defined by an email and a pass
 ## Getting Started
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
