@@ -8,9 +8,6 @@ export const fetchData = async () =>{
     try{
         const {data:{"slip": info}} = await axios.get(url);
         const sentence = info[infoArray[1]];
-        
-        //NOTE: The commented line below is used for testing if you want to print the output of the text:
-        //console.log(createErrors(sentence));
         return createErrors(sentence);
     } catch (error) {
         console.log("API reached maximum calls");
@@ -18,11 +15,6 @@ export const fetchData = async () =>{
 
 
 }
-
-
-
-
-
 
 function createErrors(text){
     const minErr = 1;
@@ -46,7 +38,6 @@ function createErrors(text){
             errNum ++;
         }
     }
-
 
     for (let i = 0; i < numProblems; i++){
         let curr = words[problems[i]];
@@ -88,9 +79,6 @@ function createErrors(text){
             words[problems[i]] = "weather";
         }
 
-
-
-
         else{
             let randAction = Math.floor(Math.random() * (4));
             /*
@@ -110,10 +98,6 @@ function createErrors(text){
                 words[problems[i]] += "."
             }
         }
-
-        
-
-
     }
     return({
         original: text,
@@ -121,9 +105,6 @@ function createErrors(text){
         problems: problems,
         numProblems: numProblems,
     });
-
-
-
 }
 
 /**

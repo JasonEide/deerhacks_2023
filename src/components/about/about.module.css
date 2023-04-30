@@ -26,7 +26,19 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
-.des {
+.desJason {
+    margin-top: -200px;
+    margin-left: 40px;
+}
+.desOmar {
+    margin-top: -200px;
+    margin-left: 40px;
+}
+.desDamon {
+    margin-top: -120px;
+    margin-left: 40px;
+}
+.desNao {
     margin-top: -200px;
     margin-left: 40px;
 }

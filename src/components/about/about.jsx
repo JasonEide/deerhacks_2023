@@ -20,31 +20,42 @@ export default function About() {
             </div>
             <div className={styles.pic}>
                 <img src={require("./pictures/Jason.jpg")} width='315px' height='275px'/>
-                <div className={styles.des}>
+                <div className={styles.desJason}>
                     <h1>Jason Eide</h1>
                 </div>
             </div>
             <div className={styles.pic}>
                 <img src={require("./pictures/omar.jpg")}/>
-                <div className={styles.des}>
+                <div className={styles.desOmar}>
                     <h1>Omar</h1>
                 </div>
             </div>
             <div className={styles.pic}>
                 <img src={require("./pictures/damon.png")}/>
-                <div className={styles.des}>
-                    <h1>Damon</h1>
-                    Name/Nickname: Damon Ma
-                    Pronouns: He/Him
-                    Year of study: 2nd\n
-                    Skillsets: Python, Java, JavaScript, HTML/CSS, C, Bash
-                    Hobbies: Music, Travelling
-                    
+                <div className={styles.desDamon}>
+                    <h1>
+                        Damon
+                    </h1>
+                    <div>
+                        Name/Nickname: Damon Ma
+                    </div>
+                    <div>
+                        Pronouns: He/Him
+                    </div>
+                    <div>
+                        Year of study: 2nd\n
+                    </div>
+                    <div>
+                        Skillsets: Python, Java, JavaScript, HTML/CSS, C, Bash
+                    </div>
+                    <div>
+                        Hobbies: Music, Travelling
+                    </div>
                 </div>
             </div>
             <div className={styles.pic}>
                 <img src={require("./pictures/nao.jpg")}/>
-                <div className={styles.des}>
+                <div className={styles.desNao}>
                     <h1>Nao</h1>
                 </div>
             </div>
