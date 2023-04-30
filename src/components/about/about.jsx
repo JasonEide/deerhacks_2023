@@ -34,6 +34,12 @@ export default function About() {
                 <img src={require("./pictures/damon.png")}/>
                 <div className={styles.des}>
                     <h1>Damon</h1>
+                    Name/Nickname: Damon Ma
+                    Pronouns: He/Him
+                    Year of study: 2nd\n
+                    Skillsets: Python, Java, JavaScript, HTML/CSS, C, Bash
+                    Hobbies: Music, Travelling
+                    
                 </div>
             </div>
             <div className={styles.pic}>
