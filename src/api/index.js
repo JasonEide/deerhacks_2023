@@ -5,16 +5,20 @@ const infoArray = ["id", "advice"];
 
 export const fetchData = async () =>{
     let paragraph = '';
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         const num = Math.random() * (224 - 1) + 1;
-        let tempUrl = `${url}/${num}`
-        try{
-            const {data:{"slip": info}} = await axios.get(tempUrl);
-            const sentence = info[infoArray[1]];
-            paragraph = `${paragraph} ${sentence}`
-        } catch (error) {
-            console.log("API reached maximum calls");
+        if (num != 146) {
+            let tempUrl = `${url}/${num}`;
+            try{
+                const {data:{"slip": info}} = await axios.get(tempUrl);
+                const sentence = info[infoArray[1]];
+                console.log(sentence, num);
+                paragraph = `${paragraph}${sentence}`
+            } catch (error) {
+                console.log("API reached maximum calls");
+            }
         }
+
     }  
 
     return createErrors(paragraph);
