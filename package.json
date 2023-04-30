@@ -2,7 +2,7 @@
   "name": "deerhacks_2023",
   "version": "0.1.0",
   "private": true,
-  "homepage": "www.fixmymistake.tech",
+  "homepage": "https://jasoneide.github.io/deerhacks_2023/",
   "dependencies": {
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
