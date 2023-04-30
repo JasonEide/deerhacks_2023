@@ -154,10 +154,7 @@ export default function About() {
                         Year of study: 2nd
                     </div>
                     <div>
-                        Skillsets: Python, Java, JavaScript, HTML/CSS, C, Bash
-                    </div>
-                    <div>
-                        Hobbies: Music, Travelling
+                        Hobbies: Music, travelling
                     </div>
                 </div>
             </div>
@@ -165,7 +162,7 @@ export default function About() {
                 <img src={require("./pictures/nao.jpg")} alt="Nao pic"/>
                 <div className={styles.desNao}>
                     <h1>
-                        Nao
+                        Nao Nagashima
                         <a href='https://www.linkedin.com/in/nao-nagashima-68b045234/' className={styles.image}>
                             <LinkedInIcon/>
                         </a>
@@ -180,7 +177,7 @@ export default function About() {
                         Year of Study: 2nd
                     </div>
                     <div>
-                        Hobbies: Playing Mario Cart, reading
+                        Hobbies: Playing Mario Kart, reading
                     </div>
                 </div>
             </div>
