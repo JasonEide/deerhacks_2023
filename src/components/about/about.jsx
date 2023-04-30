@@ -19,19 +19,19 @@ export default function About() {
                 </div>
             </div>
             <div className={styles.pic}>
-                <img src={require("./pictures/damon.png")} width='315px' height='275px'/>
+                <img src={require("./pictures/Jason.jpg")} width='315px' height='275px'/>
                 <div className={styles.des}>
                     <h1>Jason Eide</h1>
                 </div>
             </div>
             <div className={styles.pic}>
-                <img src={require("./pictures/nao.jpg")}/>
+                <img src={require("./pictures/omar.jpg")}/>
                 <div className={styles.des}>
                     <h1>Omar</h1>
                 </div>
             </div>
             <div className={styles.pic}>
-                <img src={require("./pictures/nao.jpg")}/>
+                <img src={require("./pictures/damon.png")}/>
                 <div className={styles.des}>
                     <h1>Damon</h1>
                 </div>
@@ -39,7 +39,7 @@ export default function About() {
             <div className={styles.pic}>
                 <img src={require("./pictures/nao.jpg")}/>
                 <div className={styles.des}>
-                    <h1>Na</h1>
+                    <h1>Nao</h1>
                 </div>
             </div>
         </div>

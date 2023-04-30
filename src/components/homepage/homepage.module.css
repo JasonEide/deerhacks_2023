@@ -2,6 +2,9 @@ body {
     background: #ececec;
     font-family: 'Anton', sans-serif;
 }
+h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 .background {
     display: flex;
     padding: 2% 6%;
@@ -24,6 +27,7 @@ body {
 }
 .buttons {
     margin-right: 10px !important;
+    transition: all 0.3s ease;
 }
 .expwrapper{
     position:absolute;

@@ -3,31 +3,31 @@ body {
     font-family: 'Anton', sans-serif;
 }
 .container {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .rectangle {
-display: inline-block;
-width: 500px;
-height: 500px;
-margin-top: 50px;
-margin-bottom: 50px;
-background-color: white;
-border-radius: 40px;
+	display: inline-block;
+	width: 500px;
+	height: 500px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+	border-radius: 40px;
 }
 .email {
-  margin-left: 20% !important;
-  margin-right: 20% !important;
-  margin-top: 30% !important;
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+	margin-top: 30% !important;
   
 }
 .pass {
-  padding-top: 20px;
-  margin-left: 20% !important;
-  margin-right: 20% !important;
-  width: -100px;
+	padding-top: 20px;
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+	width: -100px;
 }
 .labelpass {
     left: -13px !important;
