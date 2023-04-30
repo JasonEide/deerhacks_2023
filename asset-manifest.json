@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/deerhacks_2023/static/css/main.e24cc29e.css",
-    "main.js": "/deerhacks_2023/static/js/main.b514dded.js",
-    "static/media/damon.png": "/deerhacks_2023/static/media/damon.8db93c47b4ed704a109a.png",
-    "static/media/Jason.jpg": "/deerhacks_2023/static/media/Jason.5c362619e69fad63533c.jpg",
-    "static/media/omar.jpg": "/deerhacks_2023/static/media/omar.5d862ec622c24e3e1deb.jpg",
-    "static/media/nao.jpg": "/deerhacks_2023/static/media/nao.253baec3ee4a6e2f65ff.jpg",
-    "index.html": "/deerhacks_2023/index.html",
-    "main.e24cc29e.css.map": "/deerhacks_2023/static/css/main.e24cc29e.css.map",
-    "main.b514dded.js.map": "/deerhacks_2023/static/js/main.b514dded.js.map"
+    "main.css": "/static/css/main.5b74db5e.css",
+    "main.js": "/static/js/main.d6862f40.js",
+    "static/media/damon.png": "/static/media/damon.8db93c47b4ed704a109a.png",
+    "static/media/Jason.jpg": "/static/media/Jason.5c362619e69fad63533c.jpg",
+    "static/media/omar.jpg": "/static/media/omar.5d862ec622c24e3e1deb.jpg",
+    "static/media/nao.jpg": "/static/media/nao.253baec3ee4a6e2f65ff.jpg",
+    "index.html": "/index.html",
+    "main.5b74db5e.css.map": "/static/css/main.5b74db5e.css.map",
+    "main.d6862f40.js.map": "/static/js/main.d6862f40.js.map"
   },
   "entrypoints": [
-    "static/css/main.e24cc29e.css",
-    "static/js/main.b514dded.js"
+    "static/css/main.5b74db5e.css",
+    "static/js/main.d6862f40.js"
   ]
 }
