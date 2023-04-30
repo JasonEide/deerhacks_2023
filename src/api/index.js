@@ -5,6 +5,7 @@ const infoArray = ["id", "advice"];
 
 export const fetchData = async () =>{
     let paragraph = '';
+    let temp = 0;
     for (let i = 0; i < 2; i++) {
         const num = Math.random() * (224 - 1) + 1;
         if (num != 146) {
@@ -13,7 +14,12 @@ export const fetchData = async () =>{
                 const {data:{"slip": info}} = await axios.get(tempUrl);
                 const sentence = info[infoArray[1]];
                 console.log(sentence, num);
-                paragraph = `${paragraph}${sentence}`
+                if (temp == 1) {
+                    paragraph = `${paragraph} ${sentence}`
+                } else {
+                    paragraph = `${paragraph}${sentence}`
+                    temp = 1;
+                }
             } catch (error) {
                 console.log("API reached maximum calls");
             }
